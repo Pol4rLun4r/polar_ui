@@ -1,0 +1,17 @@
+{
+  "name": "polar_ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pol4rLun4r/polar_ui.git"
+  },
+  "author": "Pol4rLun4r",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pol4rLun4r/polar_ui/issues"
+  },
+  "homepage": "https://github.com/Pol4rLun4r/polar_ui#readme"
+}
