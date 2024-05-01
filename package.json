@@ -1,6 +1,6 @@
 {
   "name": "polar_ui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {},
@@ -13,5 +13,8 @@
   "bugs": {
     "url": "https://github.com/Pol4rLun4r/polar_ui/issues"
   },
-  "homepage": "https://github.com/Pol4rLun4r/polar_ui#readme"
+  "homepage": "https://github.com/Pol4rLun4r/polar_ui#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.12"
+  }
 }
