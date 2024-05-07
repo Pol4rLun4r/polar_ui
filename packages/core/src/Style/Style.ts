@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 // type
-import type { PhantomStyleProps } from "../@Types/style-props";
+import type { PolarStyleProps } from "../@Types/style-props";
 
 // settings
 import { FontSize, FontWeight } from "./typography/Typography.style";
@@ -12,45 +12,45 @@ import { BorderRadius } from "./size/Radius.style";
 const Style = () => {
     return css`
 
-    flex-direction: ${({ direction }: PhantomStyleProps) => direction};
-    justify-content: ${({ justify }: PhantomStyleProps) => justify};
-    align-items: ${({ align }: PhantomStyleProps) => align};
+    flex-direction: ${({ direction }: PolarStyleProps) => direction};
+    justify-content: ${({ justify }: PolarStyleProps) => justify};
+    align-items: ${({ align }: PolarStyleProps) => align};
     ${Gap()};
 
-    width: ${({ width }: PhantomStyleProps) => width};
-    height: ${({ height }: PhantomStyleProps) => height};
+    width: ${({ width }: PolarStyleProps) => width};
+    height: ${({ height }: PolarStyleProps) => height};
     
-    max-width: ${({ maxWidth }: PhantomStyleProps) => maxWidth};
-    min-width: ${({ minWidth }: PhantomStyleProps) => minWidth};
-    max-height: ${({ maxHeight }: PhantomStyleProps) => maxHeight};
-    min-height: ${({ minHeight }: PhantomStyleProps) => minHeight};
+    max-width: ${({ maxWidth }: PolarStyleProps) => maxWidth};
+    min-width: ${({ minWidth }: PolarStyleProps) => minWidth};
+    max-height: ${({ maxHeight }: PolarStyleProps) => maxHeight};
+    min-height: ${({ minHeight }: PolarStyleProps) => minHeight};
 
-    margin-top: ${({ marginTop }: PhantomStyleProps) => marginTop};
-    margin-bottom: ${({ marginBottom }: PhantomStyleProps) => marginBottom};
-    margin-left: ${({ marginLeft }: PhantomStyleProps) => marginLeft};
-    margin-right: ${({ marginRight }: PhantomStyleProps) => marginRight};
-    margin: ${({ margin }: PhantomStyleProps) => margin};
+    margin-top: ${({ marginTop }: PolarStyleProps) => marginTop};
+    margin-bottom: ${({ marginBottom }: PolarStyleProps) => marginBottom};
+    margin-left: ${({ marginLeft }: PolarStyleProps) => marginLeft};
+    margin-right: ${({ marginRight }: PolarStyleProps) => marginRight};
+    margin: ${({ margin }: PolarStyleProps) => margin};
 
     ${Padding()}
 
     ${BorderRadius()}
 
     ${FontWeight()};
-    text-align: ${({ textAlign }: PhantomStyleProps) => textAlign};
+    text-align: ${({ textAlign }: PolarStyleProps) => textAlign};
     ${FontSize()};
-    line-height: ${({ lineHeight }: PhantomStyleProps) => lineHeight};
-    letter-spacing: ${({ letterSpacing }: PhantomStyleProps) => letterSpacing};
-    text-transform: ${({ textTransform }: PhantomStyleProps) => textTransform};
+    line-height: ${({ lineHeight }: PolarStyleProps) => lineHeight};
+    letter-spacing: ${({ letterSpacing }: PolarStyleProps) => letterSpacing};
+    text-transform: ${({ textTransform }: PolarStyleProps) => textTransform};
 
-    position: ${({ position }: PhantomStyleProps) => position};
-    display: ${({ display }: PhantomStyleProps) => display};
-    top: ${({ top }: PhantomStyleProps) => top};
-    left: ${({ left }: PhantomStyleProps) => left};
-    bottom: ${({ bottom }: PhantomStyleProps) => bottom};
-    right: ${({ right }: PhantomStyleProps) => right};
+    position: ${({ position }: PolarStyleProps) => position};
+    display: ${({ display }: PolarStyleProps) => display};
+    top: ${({ top }: PolarStyleProps) => top};
+    left: ${({ left }: PolarStyleProps) => left};
+    bottom: ${({ bottom }: PolarStyleProps) => bottom};
+    right: ${({ right }: PolarStyleProps) => right};
 
-    background-color: ${({ backgroundColor }: PhantomStyleProps) => backgroundColor};
-    color: ${({ color }: PhantomStyleProps) => color};
+    background-color: ${({ backgroundColor }: PolarStyleProps) => backgroundColor};
+    color: ${({ color }: PolarStyleProps) => color};
 `;
 };
 

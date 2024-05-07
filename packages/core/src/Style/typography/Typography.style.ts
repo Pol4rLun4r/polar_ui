@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 // type
-import type { PhantomStyleProps } from "../../@Types/style-props";
+import type { PolarStyleProps } from "../../@Types/style-props";
 
 
 // size
@@ -9,7 +9,7 @@ import { $FontSize, $FontWeight } from "../../@Sizes/Typography";
 
 export const FontSize = () => {
     return css`
-    font-size: ${({ fontSize }: PhantomStyleProps) => fontSize === 'xs' ? $FontSize.xs :
+    font-size: ${({ fontSize }: PolarStyleProps) => fontSize === 'xs' ? $FontSize.xs :
             fontSize === 'sm' ? $FontSize.sm :
                 fontSize === 'md' ? $FontSize.md :
                     fontSize === 'lg' ? $FontSize.lg :
@@ -20,7 +20,7 @@ export const FontSize = () => {
 
 export const FontWeight = () => {
     return css`
-        font-weight: ${({ fontWeight }: PhantomStyleProps) => fontWeight === "black" ? $FontWeight.black :
+        font-weight: ${({ fontWeight }: PolarStyleProps) => fontWeight === "black" ? $FontWeight.black :
             fontWeight === "bold" ? $FontWeight.bold :
                 fontWeight === "semiBold" ? $FontWeight.semiBold :
                     fontWeight === "regular" ? $FontWeight.regular :

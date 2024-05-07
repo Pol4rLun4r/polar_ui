@@ -5,7 +5,7 @@ import { textColor, textColorDescription, textColorWhite } from "../../../../The
 import themeColorSchema from "../../../../hook/ThemeHook";
 
 // type
-import type { TextProps } from "../../../../@Types/props";
+import type { TextProps } from "../props";
 
 const VariantGradient = () => {
     return css`

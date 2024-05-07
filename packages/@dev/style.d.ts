@@ -2,10 +2,10 @@ import 'styled-components';
 
 type mode = 'dark' | 'light';
 
-type colorPalette = any;
+type colorPalette = unknown;
 
-declare module 'styled-components' {
-  export interface DefaultTheme {
+declare namespace ThemeProvider {
+  export interface ThemeProviderComponent {
     mode: mode,
     colorPalette?: colorPalette
   }

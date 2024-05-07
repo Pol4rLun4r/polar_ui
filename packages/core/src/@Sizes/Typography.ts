@@ -25,3 +25,12 @@ export const $FontWeight = {
     light: 300,
     semiLight: 350
 }
+
+export const $FontSizeHeadings = {
+    h1: '2.125rem',
+    h2: '1.625rem',
+    h3: '1.375rem',
+    h4: '1.125rem',
+    h5: '1rem',
+    h6: '0.875rem'
+}

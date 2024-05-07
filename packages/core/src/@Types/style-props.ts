@@ -1,11 +1,10 @@
-import type { PhantomSize } from "./types";
-import type { PhantomFontWeight } from "./typography";
+import type { PolarSize, PolarFontWeight } from "./types";
 
-export interface PhantomStyleProps {
+export interface PolarStyleProps {
     direction?: React.CSSProperties['flexDirection'] | (string & NonNullable<unknown>);
     justify?: React.CSSProperties['justifyContent'];
     align?: React.CSSProperties['alignItems'];
-    gap?: PhantomSize | (string & NonNullable<unknown>);
+    gap?: PolarSize | (string & NonNullable<unknown>);
 
     width?: React.CSSProperties['width'];
     height?: React.CSSProperties['height'];
@@ -21,17 +20,17 @@ export interface PhantomStyleProps {
     marginRight?: React.CSSProperties['marginRight'];
     margin?: React.CSSProperties['margin'];
 
-    paddingTop?: PhantomSize | (string & NonNullable<unknown>) | React.CSSProperties['paddingTop'];
-    paddingBottom?: PhantomSize | React.CSSProperties['paddingBottom'];
-    paddingLeft?: PhantomSize | React.CSSProperties['paddingLeft'];
-    paddingRight?: PhantomSize | React.CSSProperties['paddingRight'];
-    padding?: PhantomSize | React.CSSProperties['padding'];
+    paddingTop?: PolarSize | (string & NonNullable<unknown>) | React.CSSProperties['paddingTop'];
+    paddingBottom?: PolarSize | React.CSSProperties['paddingBottom'];
+    paddingLeft?: PolarSize | React.CSSProperties['paddingLeft'];
+    paddingRight?: PolarSize | React.CSSProperties['paddingRight'];
+    padding?: PolarSize | React.CSSProperties['padding'];
 
-    radius?: PhantomSize;
+    radius?: PolarSize;
 
-    fontWeight?: PhantomFontWeight | number | (string & NonNullable<unknown>);
+    fontWeight?: PolarFontWeight | number | (string & NonNullable<unknown>);
     textAlign?: React.CSSProperties['textAlign'];
-    fontSize?: PhantomSize | (string & NonNullable<unknown>);
+    fontSize?: PolarSize | (string & NonNullable<unknown>);
     lineHeight?: (string & NonNullable<unknown>) | React.CSSProperties['lineHeight'];
     letterSpacing?: React.CSSProperties['letterSpacing'];
     textTransform?: React.CSSProperties['textTransform'];
