@@ -1,16 +1,19 @@
 import 'react-app-polyfill/ie11';
-import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 // Ui
-import { GlobalStyle, Title, ThemeProvider, Text } from "../dist"
+import { GlobalStyle, Title, ThemeProvider, Text, Stack, Box } from "../dist"
 
 const App = () => {
   return (
     <ThemeProvider theme={{ mode: 'dark', colorPalette: 'magenta' }}>
       <GlobalStyle />
-      <Title>Polar UI</Title>
-      <Text>lorem lorem</Text>
+      <Stack justify="center" align="center" height={"100%"}>
+        <Box radius='lg' direction='column'>
+          <Title as={"h2"} textTransform="capitalize" fontWeight={"bold"} fontSize="3rem">hello</Title>
+          <Text>lorem</Text>
+        </Box>
+      </Stack>
     </ThemeProvider>
   );
 };

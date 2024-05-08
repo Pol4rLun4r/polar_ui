@@ -24,3 +24,7 @@ export interface PolarHTMLInputElement extends Omit<HTMLMotionProps<"input">, "w
 export interface PolarHTMLButtonElement extends Omit<BaseHTMLAttributes<"div">, "color">{
     as?: any | (string & NonNullable<unknown>);
 }
+
+export interface LayoutComponentsProps extends PolarProps {
+    grow?: true;
+}
