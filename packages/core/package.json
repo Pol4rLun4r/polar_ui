@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,7 +22,7 @@
     "deploy": "npm publish --access=public"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=18"
   },
   "husky": {
     "hooks": {
@@ -64,6 +64,7 @@
     "@types/styled-components": "^5.1.34",
     "@types/styled-theming": "^2.2.8",
     "framer-motion": "^11.1.7",
+    "react-laag": "^2.0.5",
     "styled-components": "=5.3.9",
     "styled-theming": "^2.2.0"
   }
