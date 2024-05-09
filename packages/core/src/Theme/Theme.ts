@@ -79,32 +79,6 @@ export const titleColor = theme('mode', {
     dark: '#ffffff',
 })
 
-// menu
-export const borderMenu = theme('mode', {
-    light: '#e9ecef',
-    dark: '#424242',
-})
-
-export const bodyMenu = theme('mode', {
-    light: '#ffffff',
-    dark: '#2e2e2e',
-})
-
-export const fontMenuItems = theme('mode', {
-    light: '#000000',
-    dark: '#c9c9c9',
-})
-
-export const fontMenuLabel = theme('mode', {
-    light: '#868e96',
-    dark: '#828282'
-})
-
-export const hoverMenuItems = theme('mode', {
-    light: '#f1f3f5',
-    dark: '	#424242'
-})
-
 // card
 
 export const cardBodyPrimary = theme('mode', {
@@ -128,17 +102,3 @@ export const bodyBadge = theme('mode', {
     light: '#ffffff',
     dark: '#3b3b3b',
 })
-
-// tooltip
-
-export const bodyTooltipLight = '#1f1f1f';
-export const bodyTooltipDark = '#ffffff';
-export const bodyTooltip = theme('mode', {
-    light: bodyTooltipLight,
-    dark: bodyTooltipDark,
-});
-
-export const textTooltip = theme('mode', {
-    dark: '#000000',
-    light: '#ffffff',
-});
