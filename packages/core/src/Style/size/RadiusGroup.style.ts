@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 // type
-import type { PhantomStyleProps } from "../../@Types/style-props";
+import type { PolarStyleProps } from "../../@Types/style-props";
 
 // size
 import { $Radius } from "../../@Sizes/Radius";
@@ -9,13 +9,13 @@ import { $Radius } from "../../@Sizes/Radius";
 const DirectionColumn = () => {
     return css`
         &:first-child {
-        border-top-left-radius: ${({ radius }: PhantomStyleProps) => radius === 'xs' ? $Radius.xs :
+        border-top-left-radius: ${({ radius }: PolarStyleProps) => radius === 'xs' ? $Radius.xs :
             radius === 'sm' ? $Radius.sm :
                 radius === 'md' ? $Radius.md :
                     radius === 'lg' ? $Radius.lg :
                         radius === 'xl' ? $Radius.xl : $Radius.sm};
 
-        border-top-right-radius: ${({ radius }: PhantomStyleProps) => radius === 'xs' ? $Radius.xs :
+        border-top-right-radius: ${({ radius }: PolarStyleProps) => radius === 'xs' ? $Radius.xs :
             radius === 'sm' ? $Radius.sm :
                 radius === 'md' ? $Radius.md :
                     radius === 'lg' ? $Radius.lg :
@@ -23,13 +23,13 @@ const DirectionColumn = () => {
         }
 
         &:last-child {
-        border-bottom-left-radius: ${({ radius }: PhantomStyleProps) => radius === 'xs' ? $Radius.xs :
+        border-bottom-left-radius: ${({ radius }: PolarStyleProps) => radius === 'xs' ? $Radius.xs :
             radius === 'sm' ? $Radius.sm :
                 radius === 'md' ? $Radius.md :
                     radius === 'lg' ? $Radius.lg :
                         radius === 'xl' ? $Radius.xl : $Radius.sm};
 
-        border-bottom-right-radius: ${({ radius }: PhantomStyleProps) => radius === 'xs' ? $Radius.xs :
+        border-bottom-right-radius: ${({ radius }: PolarStyleProps) => radius === 'xs' ? $Radius.xs :
             radius === 'sm' ? $Radius.sm :
                 radius === 'md' ? $Radius.md :
                     radius === 'lg' ? $Radius.lg :
@@ -42,13 +42,13 @@ const DirectionColumn = () => {
 const DirectionRow = () => {
     return css`
         &:first-child {
-        border-top-left-radius: ${({ radius }: PhantomStyleProps) => radius === 'xs' ? $Radius.xs :
+        border-top-left-radius: ${({ radius }: PolarStyleProps) => radius === 'xs' ? $Radius.xs :
             radius === 'sm' ? $Radius.sm :
                 radius === 'md' ? $Radius.md :
                     radius === 'lg' ? $Radius.lg :
                         radius === 'xl' ? $Radius.xl : $Radius.sm};
 
-        border-bottom-left-radius: ${({ radius }: PhantomStyleProps) => radius === 'xs' ? $Radius.xs :
+        border-bottom-left-radius: ${({ radius }: PolarStyleProps) => radius === 'xs' ? $Radius.xs :
             radius === 'sm' ? $Radius.sm :
                 radius === 'md' ? $Radius.md :
                     radius === 'lg' ? $Radius.lg :
@@ -56,13 +56,13 @@ const DirectionRow = () => {
         }
         
         &:last-child {
-        border-top-right-radius: ${({ radius }: PhantomStyleProps) => radius === 'xs' ? $Radius.xs :
+        border-top-right-radius: ${({ radius }: PolarStyleProps) => radius === 'xs' ? $Radius.xs :
             radius === 'sm' ? $Radius.sm :
                 radius === 'md' ? $Radius.md :
                     radius === 'lg' ? $Radius.lg :
                         radius === 'xl' ? $Radius.xl : $Radius.sm};
 
-        border-bottom-right-radius: ${({ radius }: PhantomStyleProps) => radius === 'xs' ? $Radius.xs :
+        border-bottom-right-radius: ${({ radius }: PolarStyleProps) => radius === 'xs' ? $Radius.xs :
             radius === 'sm' ? $Radius.sm :
                 radius === 'md' ? $Radius.md :
                     radius === 'lg' ? $Radius.lg :
@@ -73,6 +73,6 @@ const DirectionRow = () => {
 
 export const BorderRadiusGroup = () => {
     return css`
-        ${({ direction }: PhantomStyleProps) => direction === 'row' ? DirectionRow() : DirectionColumn()}
+        ${({ direction }: PolarStyleProps) => direction === 'row' ? DirectionRow() : DirectionColumn()}
     `;
 };

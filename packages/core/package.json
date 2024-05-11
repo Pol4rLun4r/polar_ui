@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -49,6 +49,8 @@
     }
   ],
   "devDependencies": {
+    "@babel/plugin-syntax-jsx": "^7.24.1",
+    "@babel/preset-react": "^7.24.1",
     "@size-limit/preset-small-lib": "^11.1.2",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
