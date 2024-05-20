@@ -1,2 +1,1 @@
-# Polar UI Core User Guide
-## under construction!
+# React + TypeScript + Vite

@@ -1,73 +1,43 @@
 {
-  "version": "0.4.0",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "name": "@polar_ui/core",
+  "private": true,
+  "version": "1.0.0-alpha.1",
+  "type": "module",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
-  "engines": {
-    "node": ">=10"
+  "main": "./dist/core.umd.cjs",
+  "module": "./dist/core.js",
+  "exports": {
+    ".": {
+      "import": "./dist/core.js",
+      "require": "./dist/core.umd.cjs"
+    }
   },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
-    "deployPatch": "npm version patch && npm publish --access=public",
-    "deploy": "npm publish --access=public"
-  },
-  "peerDependencies": {
-    "react": ">=18"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "name": "@polar_ui/core",
-  "author": "Pol4rLun4r",
-  "module": "dist/core.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/core.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/core.esm.js",
-      "limit": "10 KB"
-    }
-  ],
-  "devDependencies": {
-    "@babel/plugin-syntax-jsx": "^7.24.1",
-    "@babel/preset-react": "^7.24.1",
-    "@size-limit/preset-small-lib": "^11.1.2",
-    "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.25",
-    "husky": "^9.0.11",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "size-limit": "^11.1.2",
-    "tsdx": "^0.14.1",
-    "tslib": "^2.6.2",
-    "typescript": "^5.4.5"
+    "dev": "vite",
+    "prebuild": "rm -rf dist",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "publish": "npm run build"
   },
   "dependencies": {
-    "@types/styled-components": "^5.1.34",
-    "@types/styled-theming": "^2.2.8",
-    "framer-motion": "^11.1.7",
-    "react-laag": "^2.0.5",
-    "styled-components": "=5.3.9",
-    "styled-theming": "^2.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-tsconfig-paths": "^4.3.2"
   }
 }
