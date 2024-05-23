@@ -3,10 +3,10 @@ import React from "react";
 import type { Preview } from "@storybook/react";
 
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyle } from '../lib/Style/index'
+import { GlobalStyle } from '../lib/Style/index';
 
 // themes
-import { colorNames } from "../lib/Style/Theme/ColorPalette"
+import { colorNames } from "../lib/Theme/ColorPalette";
 
 const preview: Preview = {
   parameters: {
