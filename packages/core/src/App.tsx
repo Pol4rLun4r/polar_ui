@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div>
-        <Button />
+        <Button>oi</Button>
       </div>
     </>
   )
