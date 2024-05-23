@@ -6,7 +6,10 @@ import Style from "../../../Style/Style";
 // settings
 import Variants from "./style/Variants";
 
-const Text = styled.p`
+// types
+import { TextProps } from "./props";
+
+const Text = styled.p<TextProps>`
     ${Style()}
     ${Variants()}
 `
