@@ -3,7 +3,7 @@ import React from "react";
 import type { Preview } from "@storybook/react";
 
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyle } from '../lib/Style/index';
+import GlobalStyle from '../lib/Style/Global.style'
 
 // themes
 import { colorNames } from "../lib/Theme/ColorPalette";
