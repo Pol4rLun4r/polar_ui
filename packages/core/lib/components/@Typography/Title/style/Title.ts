@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 // theme
-import { titleColor } from "../../../Theme/Themes/Typography/Title";
+import { titleColor } from "../../../../Theme/Themes/Typography/Title";
 
 // default settings
-import Style from "../../../Style/Style";
+import Style from "../../../../Style/Style";
 
 // sizes
-import { $FontSizeHeadings } from "../../../@Sizes/Typography";
+import { $FontSizeHeadings } from "../../../../@Sizes/Typography";
 
 // types
-import type { TitleProps } from "./props";
+import type { TitleProps } from "../props";
 
 const Headings = ({ order, fontSize }: TitleProps) => {
     return (
