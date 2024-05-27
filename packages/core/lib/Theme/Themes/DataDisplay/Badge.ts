@@ -1,7 +1,7 @@
 import theme from "styled-theming";
 
 export const badgeBackground = theme('mode', {
-    light: '#ffffff',
+    light: '#f8f9fa',
     dark: '#2e2e2e'
 })
 

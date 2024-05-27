@@ -19,6 +19,18 @@ const GlobalStyle = createGlobalStyle`
             text-decoration: none;
         }
     }
+    
+    html {
+        .sb-main-padded {
+            width: 100%;
+            height: 100vh;
+
+            #storybook-root {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    } 
 
     body{
         width: 100%;

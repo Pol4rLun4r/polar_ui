@@ -73,10 +73,3 @@ export const cardBorder = theme('mode', {
 //     light: '#ffffff',
 //     dark: '	##2e2e2e'
 // })
-
-// badge
-
-export const bodyBadge = theme('mode', {
-    light: '#ffffff',
-    dark: '#3b3b3b',
-})

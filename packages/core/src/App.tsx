@@ -1,17 +1,24 @@
 // UI
-import { Title, Text, Box, Flex, Stack } from "polar_ui"
+import { Text, Card, Badge, Group, Image, Stack } from "polar_ui"
 
 function App() {
 
   return (
-    <Flex justify="center" align="center" width="100%" height="100%">
-      <Box radius="lg">
-        <Stack align="center">
-          <Title order="h2" textTransform="capitalize" fontWeight={'black'}>hello world</Title>
-          <Text variant="description" textTransform="capitalize">big world</Text>
-        </Stack>
-      </Box>
-    </Flex>
+    <Stack justify="center" align="center" width="100%" height="100%">
+      <Card maxWidth={"21.563rem"} radius="lg" withBorder>
+        <Card.Section>
+          <Image src="https://www.renderhub.com/clickdamn/ice-bear-polar-bear/ice-bear-polar-bear-01.jpg" />
+        </Card.Section>
+        <Group justify="space-between">
+          <Text textTransform="capitalize" fontWeight="bold">polar bear</Text>
+          <Badge variant="filled" radius="lg">live</Badge>
+        </Group>
+        <Text variant="description" fontSize="sm">
+          Polar bears are stocky, with a long neck, relatively small head, short, rounded ears, and a short tail. The male, which is much larger than the female, weighs 410 to 720 kg.
+        </Text>
+        {/*  button space */}
+      </Card>
+    </Stack>
   )
 }
 

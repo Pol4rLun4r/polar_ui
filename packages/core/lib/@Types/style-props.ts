@@ -20,11 +20,11 @@ export interface PolarStyleProps {
     marginRight?: React.CSSProperties['marginRight'];
     margin?: React.CSSProperties['margin'];
 
-    paddingTop?: PolarSize | (string & NonNullable<unknown>) | React.CSSProperties['paddingTop'];
-    paddingBottom?: PolarSize | React.CSSProperties['paddingBottom'];
-    paddingLeft?: PolarSize | React.CSSProperties['paddingLeft'];
-    paddingRight?: PolarSize | React.CSSProperties['paddingRight'];
-    padding?: PolarSize | React.CSSProperties['padding'];
+    paddingTop?: PolarSize | (string & NonNullable<unknown>);
+    paddingBottom?: PolarSize | (string & NonNullable<unknown>);
+    paddingLeft?: PolarSize | (string & NonNullable<unknown>);
+    paddingRight?: PolarSize | (string & NonNullable<unknown>);
+    padding?: PolarSize | (string & NonNullable<unknown>);
 
     radius?: PolarSize;
 
