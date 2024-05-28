@@ -16,7 +16,7 @@ function App() {
         <Text variant="description" fontSize="sm">
           Polar bears are stocky, with a long neck, relatively small head, short, rounded ears, and a short tail. The male, which is much larger than the female, weighs 410 to 720 kg.
         </Text>
-        <button>isso funciona?</button>
+        <button>isso funciona? pois vai funcionar agora</button>
       </Card>
     </Stack>
   )
