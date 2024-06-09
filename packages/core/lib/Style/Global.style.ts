@@ -3,6 +3,9 @@ import { createGlobalStyle } from "styled-components";
 // colors
 import { bodyColorPrimary } from "../Theme/Theme";
 
+// style
+import { ArrowTooltip } from "../components/@Overlays/Tooltip/style/Tooltip";
+
 const GlobalStyle = createGlobalStyle`
     :root {
         color-scheme: ${props => props.theme?.mode === "dark" ? 'dark' : 'light'};
@@ -28,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
             #storybook-root {
                 width: 100%;
                 height: 100%;
+
             }
         }
     } 
@@ -42,6 +46,8 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100vh;
     }
-`
+    
+    ${ArrowTooltip()}
+    `
 
 export default GlobalStyle;

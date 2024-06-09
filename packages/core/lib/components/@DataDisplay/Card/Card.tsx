@@ -10,7 +10,7 @@ import CardSection from "./CardSection"
 
 interface Props extends CardProps, PolarStyledComponentsProps {}
 
-function Card(props: Props) {
+const Card = (props: Props) => {
     return (
         <CardStyle {...props}>
             {props.children}
@@ -20,4 +20,4 @@ function Card(props: Props) {
 
 Card.Section = CardSection;
 
-export default Card
+export default Card;

@@ -5,6 +5,11 @@ export const borderMenu = theme('mode', {
     dark: '#424242',
 })
 
+export const dividerMenu = theme('mode', {
+    light: '#e9ecef',
+    dark: '#424242',
+})
+
 export const bodyMenu = theme('mode', {
     light: '#ffffff',
     dark: '#2e2e2e',
