@@ -72,8 +72,8 @@ const Menu = (props: Props) => {
     )
 }
 
-Menu.item = MenuItem;
-Menu.label = MenuLabel;
-Menu.divider = MenuDivider;
+Menu.Item = MenuItem;
+Menu.Label = MenuLabel;
+Menu.Divider = MenuDivider;
 
 export default Menu;
