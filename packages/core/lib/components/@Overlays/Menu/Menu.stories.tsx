@@ -17,10 +17,10 @@ const meta: Meta<MenuProps> = {
     },
     render: ({ ...args }) => (
         <Menu {...args} menuLauncher="Click me">
-            <Menu.label textTransform="capitalize">fruit menu</Menu.label>
-            <Menu.item leftSection="🍌">Banana</Menu.item>
-            <Menu.item leftSection="🍎">Apple</Menu.item>
-            <Menu.item leftSection="🍊">Laranja</Menu.item>
+            <Menu.Label textTransform="capitalize">fruit menu</Menu.Label>
+            <Menu.Item leftSection="🍌">Banana</Menu.Item>
+            <Menu.Item leftSection="🍎">Apple</Menu.Item>
+            <Menu.Item leftSection="🍊">Orange</Menu.Item>
         </Menu>
     )
 };
