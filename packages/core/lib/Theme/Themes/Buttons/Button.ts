@@ -5,6 +5,11 @@ export const buttonBackground = theme('mode', {
     dark: '#2e2e2e'
 })
 
+export const buttonFontColor = theme('mode', {
+    light: '#212529',
+    dark: '#ffffff'
+})
+
 export const buttonBackgroundDisabled = theme('mode', {
     light: '#f1f3f5',
     dark: '#2e2e2e'

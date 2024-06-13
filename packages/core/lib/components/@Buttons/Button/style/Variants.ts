@@ -3,13 +3,13 @@ import { css } from "styled-components";
 import type { ButtonProps } from "../props";
 
 // colors
-import { buttonBackground, buttonBackgroundDisabled, buttonBorder, buttonColorDisabled } from "../../../../Theme/Themes/Buttons/Button";
+import { buttonBackground, buttonBackgroundDisabled, buttonBorder, buttonColorDisabled, buttonFontColor } from "../../../../Theme/Themes/Buttons/Button";
 import themeColorSchema from "../../../../hook/ThemeHook";
 
 const DefaultVariant = () => {
     return css`
     border: solid 1px;
-    color: white;
+    color: ${buttonFontColor};
     background-color: ${buttonBackground};
     border-color: ${buttonBorder};
     `;

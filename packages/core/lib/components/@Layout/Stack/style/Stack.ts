@@ -14,7 +14,7 @@ const Stack = styled.div<PolarProps>`
     flex-direction: ${({ direction }) => direction ? direction : 'column'};
 
     // variants de configuração
-    align-items: ${({ align }) => align ? align : 'stretch'};
+    align-items: ${({ align }) => align ? align : 'center'};
     justify-content: ${({ justify }) => justify ? justify : 'center'};
 
 `
