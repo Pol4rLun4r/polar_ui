@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 Desktop.ini
 *storybook.log
+.npmrc
