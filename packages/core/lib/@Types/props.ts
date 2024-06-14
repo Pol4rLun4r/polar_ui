@@ -1,8 +1,7 @@
-import { ReactNode } from "react";
-
-import { BaseHTMLAttributes } from "react"; // props básicas do html
-import { HTMLMotionProps } from "framer-motion"; // props de input do framer motion
-
+// types
+import type { HTMLMotionProps } from "framer-motion"; // props de input do framer motion
+import type { ButtonHTMLAttributes, BaseHTMLAttributes } from "react"; // props básicas do html
+import type { ReactNode } from "react";
 import type { PolarStyleProps } from "./style-props"; // props de estilo
 
 export interface PolarProps extends PolarStyleProps {
@@ -21,7 +20,7 @@ export interface PolarHTMLInputElement extends Omit<HTMLMotionProps<"input">, "w
     as?: any | (string & NonNullable<unknown>);
 }
 
-export interface PolarHTMLButtonElement extends Omit<BaseHTMLAttributes<"div">, "color">{
+export interface PolarHTMLButtonElement extends Omit<ButtonHTMLAttributes<"div">, "color">{
     as?: any | (string & NonNullable<unknown>);
 }
 

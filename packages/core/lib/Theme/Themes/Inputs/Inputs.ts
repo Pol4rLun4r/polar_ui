@@ -1,7 +1,7 @@
 import theme from "styled-theming"
 
 // type
-import type { ThemeValues } from "../../hook/ThemeHook";
+import type { ThemeValues } from "../../../hook/ThemeHook";
 
 export const inputValueColor = theme('mode', {
     light: '#000000',

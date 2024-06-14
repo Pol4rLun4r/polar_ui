@@ -29,3 +29,11 @@ export const $Description = {
     lg: '1rem',
     xl: '1.125rem'
 }
+
+export const $ErrorFont = {
+    xs: '0.625rem',
+    sm: '0.75rem',
+    md: '0.875rem',
+    lg: '1rem',
+    xl: '1.125rem'
+}
