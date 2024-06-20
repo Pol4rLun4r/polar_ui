@@ -15,15 +15,15 @@ const Box = styled.div<LayoutComponentsProps>`
 
     // default
     display: flex;
-    flex-direction: ${({ direction }) => direction ? direction : 'row '};
+    flex-direction: ${({ direction }) => direction ? '' : 'row '};
     background-color: ${boxBackgroundColor};
     border: solid 1px ${boxBorderColor};
-    padding: ${$Paddings.sm};
+    padding:  ${({ padding }) => padding ? '' : $Paddings.sm };
     flex-wrap: wrap;
 
     // variants de configuração
-    align-items: ${({ align }) => align ? align : 'center'};
-    justify-content: ${({ justify }) => justify ? justify : 'center'};
+    align-items: ${({ align }) => align ? '' : 'center'};
+    justify-content: ${({ justify }) => justify ? '' : 'center'};
 
     & > * {
         ${({ grow }) => grow ? 'flex-grow: 1;' : ''}
