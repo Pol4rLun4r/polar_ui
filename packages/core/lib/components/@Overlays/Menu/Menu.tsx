@@ -40,22 +40,22 @@ const containerVariants: Variants = {
 
 interface Props extends MenuProps, PolarStyledComponentsProps { }
 
-const Menu = (props: Props) => {
+const Menu = ({ menuLauncher, placement, triggerOffset, ...props }: Props) => {
     const [isOpen, setOpen] = useState(false);
 
     const { renderLayer, triggerProps, layerProps } = useLayer({
         isOpen,
         overflowContainer: false,
-        placement: "bottom-center",
-        triggerOffset: 10,
+        placement: placement ? placement : "bottom-center",
+        triggerOffset: triggerOffset ? triggerOffset : 10,
         onOutsideClick: () => setOpen(false),
         auto: true
     });
 
     return (
         <>
-            <MenuLauncher {...triggerProps} onClick={() => setOpen(!isOpen)}>
-                {props.menuLauncher}
+            <MenuLauncher {...triggerProps} onClick={() => setOpen(!isOpen)} {...props}>
+                {menuLauncher}
             </MenuLauncher>
 
             {renderLayer(
@@ -64,6 +64,7 @@ const Menu = (props: Props) => {
                     variants={containerVariants}
                     initial="closed"
                     animate={isOpen ? "open" : "closed"}
+                    variant={props.variant}
                 >
                     {props.children}
                 </MenuContainer>

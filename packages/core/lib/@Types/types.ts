@@ -15,3 +15,5 @@ export type BadgeVariant = ActionIconVariant | 'dot';
 export type InputVariant = 'default' | 'filled'
 
 export type NavLinkVariant = 'default' | 'subtle' | 'light' | 'filled';
+
+export type PlacementType = "bottom-start" | "bottom-end" | "bottom-center" | "top-start" | "top-center" | "top-end" | "left-end" | "left-center" | "left-start" | "right-end" | "right-center" | "right-start" | "center";
