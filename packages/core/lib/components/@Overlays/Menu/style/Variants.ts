@@ -1,6 +1,7 @@
 import { css } from "styled-components";
 
-import type { MenuProps } from "../props";
+// types
+import type { MenuProps} from "../props";
 
 // colors
 import { bodyMenu, borderMenu } from "../../../../Theme/Themes/Overlays/Menu";
@@ -16,11 +17,13 @@ const DefaultVariant = () => {
     display: flex;
     flex-direction: column;
 
-    width: 10.813rem;
+    width: ${({width}: Omit<MenuProps, "menuLauncher">) => width ? width : '10.813rem'};
 
     border-radius: ${$Radius.sm};
 
     padding: 0.25rem;
+
+    gap: 0;
 
     `;
 };

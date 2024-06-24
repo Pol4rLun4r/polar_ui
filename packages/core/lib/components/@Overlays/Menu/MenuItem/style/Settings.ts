@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 // sizes
-import { $Heights, $Paddings } from "../../../../../@Sizes/Buttons";
+import { $Paddings } from "../../../../../@Sizes/Buttons";
 import { $Radius } from "../../../../../@Sizes/Radius";
 import { $FontSize } from "../../../../../@Sizes/Typography";
 
@@ -11,9 +11,8 @@ import { fontMenuItems, hoverMenuItems } from "../../../../../Theme/Themes/Overl
 export const Size = () => {
     return css`
         font-size: ${$FontSize.sm};
-        height: ${$Heights.xs};
         border-radius: ${$Radius.sm};
-        padding: ${$Paddings.xs};
+        padding: calc(${$Paddings.xs} / 2);
     `;
 };
 

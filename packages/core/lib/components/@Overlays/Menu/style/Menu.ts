@@ -9,6 +9,7 @@ import Variants from "./Variants";
 
 export const MenuContainer = styled(motion.ul)`
     // settings
+    ${Style()}
     ${Variants()}
 `
 
