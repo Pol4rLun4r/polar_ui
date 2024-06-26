@@ -37,3 +37,11 @@ export const $ErrorFont = {
     lg: '1rem',
     xl: '1.125rem'
 }
+
+export const $CheckboxSize = {
+    xs: '1rem',
+    sm: '1.25rem',
+    md: '1.5rem',
+    lg: '1.875rem',
+    xl: '2.25rem'
+}
