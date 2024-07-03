@@ -10,18 +10,22 @@ export interface PolarProps extends PolarStyleProps {
 
 export interface PolarStyledComponentsProps extends Omit<BaseHTMLAttributes<"div">, "color">  {
     as?: any | (string & NonNullable<unknown>);
+    innerRef?: any;
 }
 
 export interface PolarStyledComponentsOnlyAsProps {
     as?: any | (string & NonNullable<unknown>);
+    innerRef?: any;
 }
 
 export interface PolarHTMLInputElement extends Omit<HTMLMotionProps<"input">, "width" | "children" | "color" | "disabled" | "size" | "height"> {
     as?: any | (string & NonNullable<unknown>);
+    innerRef?: any;
 }
 
 export interface PolarHTMLButtonElement extends Omit<ButtonHTMLAttributes<"div">, "color">{
     as?: any | (string & NonNullable<unknown>);
+    innerRef?: any;
 }
 
 export interface LayoutComponentsProps extends PolarProps {
