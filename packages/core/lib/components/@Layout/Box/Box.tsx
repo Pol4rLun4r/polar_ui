@@ -1,14 +1,20 @@
 // types
-import type { LayoutComponentsProps, PolarStyledComponentsProps } from "../../../@Types/props";
+import type { PolarStyledComponentsProps } from "../../../@Types/props";
+import type { BoxProps } from "./props";
 
 // style
 import Style from "./style/Box";
 
-interface Props extends LayoutComponentsProps, PolarStyledComponentsProps { }
+interface Props extends BoxProps, PolarStyledComponentsProps { }
 
 const Box = ({ children, ...props }: Props) => {
     return (
-        <Style {...props}>{children}</Style>
+        <Style
+            ref={props.innerRef}
+            {...props}
+        >
+            {children}
+        </Style>
     )
 };
 

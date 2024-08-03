@@ -15,7 +15,7 @@ const TaskList = () => {
         >
             <Menu.Label>Task List</Menu.Label>
             <Menu.Item>
-                <Checkbox label="create input checkbox component" />
+                <Checkbox label="Dev SegmentControl" />
             </Menu.Item>
         </Menu>
     )

@@ -12,7 +12,7 @@ interface Props extends ButtonProps, PolarHTMLButtonElement {}
 
 const Button = (props: Props) => {
     return (
-        <ButtonStyle {...props}>
+        <ButtonStyle {...props} ref={props.innerRef}>
             {props.leftSection}
             {props.children}
             {props.rightSection}
