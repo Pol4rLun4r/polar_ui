@@ -4,7 +4,7 @@ import { css } from "styled-components";
 import type { CheckboxProps } from "../props";
 
 // sizes
-import { $Label, $Description, $ErrorFont, $CheckboxSize } from "../../../../@Sizes/inputs";
+import { $Label, $Description, $ErrorFont, $CheckboxSize } from "../../../../@Sizes/Inputs/inputs";
 
 export const LabelSize = () => {
     return css`

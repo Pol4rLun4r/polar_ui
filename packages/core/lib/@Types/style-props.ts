@@ -44,4 +44,5 @@ export interface PolarStyleProps {
 
     backgroundColor?: React.CSSProperties['backgroundColor'];
     color?: React.CSSProperties['color'];
+    boxShadow?: React.CSSProperties['boxShadow'] | (string & NonNullable<unknown>)
 }

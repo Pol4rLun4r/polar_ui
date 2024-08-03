@@ -8,6 +8,9 @@ interface useFloatingProps {
 
 const useFloatingIndicator = ({ parent, ref, target }: useFloatingProps) => {
 
+    // displays which element is being selected according to the `data-key` attribute
+    const dataKey = target?.getAttribute('data-key');
+
     const updatePosition = () => {
 
         if (!target || !parent) {
@@ -18,8 +21,8 @@ const useFloatingIndicator = ({ parent, ref, target }: useFloatingProps) => {
         const parentRect = parent.getBoundingClientRect();
 
         const position = {
-            top: targetRect.top - parentRect.top - 1,
-            left: targetRect.left - parentRect.left - 1,
+            top: targetRect.top - parentRect.top,
+            left: targetRect.left - parentRect.left,
             width: targetRect.width,
             height: targetRect.height,
         };
@@ -36,7 +39,7 @@ const useFloatingIndicator = ({ parent, ref, target }: useFloatingProps) => {
         updatePosition();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [parent, target?.getBoundingClientRect().width]);
+    }, [parent, target, dataKey]);
 
 }
 

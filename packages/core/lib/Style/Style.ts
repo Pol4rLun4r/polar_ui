@@ -51,6 +51,7 @@ const Style = () => {
 
     background-color: ${({ backgroundColor }: PolarStyleProps) => backgroundColor};
     color: ${({ color }: PolarStyleProps) => color};
+    box-shadow: ${({ boxShadow }: PolarStyleProps) => boxShadow};
 `;
 };
 

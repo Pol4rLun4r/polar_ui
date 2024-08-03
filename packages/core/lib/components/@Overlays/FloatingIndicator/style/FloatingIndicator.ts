@@ -17,5 +17,5 @@ export const Indicator = styled.div<PolarStyleProps>`
     transition: all .3s;
     
     // settings
-    background-color: ${({ backgroundColor }) => backgroundColor ? '' : themeColorSchema({ dark: 6, light: 6 })};
+    background-color: ${({ backgroundColor }) => backgroundColor ? backgroundColor : themeColorSchema({ dark: 6, light: 6 })};
 `;  

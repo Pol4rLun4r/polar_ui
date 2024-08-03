@@ -4,7 +4,7 @@ import { css } from "styled-components";
 import type { InputsProps } from "../props";
 
 // sizes
-import { $Height, $Label, $Description, $ErrorFont } from "../../../../@Sizes/inputs";
+import { $Height, $Label, $Description, $ErrorFont } from "../../../../@Sizes/Inputs/inputs";
 import { $FontSize } from "../../../../@Sizes/Typography";
 
 export const LabelSize = () => {
