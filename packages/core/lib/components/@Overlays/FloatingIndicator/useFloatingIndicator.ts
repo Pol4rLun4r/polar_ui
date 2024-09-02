@@ -5,10 +5,10 @@ interface useFloatingProps {
     parent: HTMLElement | null | undefined;
     ref: RefObject<HTMLDivElement>;
 
-    sizeDetection?: string;
+    Detection?: any;
 }
 
-const useFloatingIndicator = ({ parent, ref, target, sizeDetection }: useFloatingProps) => {
+const useFloatingIndicator = ({ parent, ref, target, Detection }: useFloatingProps) => {
 
     // displays which element is being selected according to the `data-key` attribute
     const dataKey = target?.getAttribute('data-key');
@@ -44,7 +44,7 @@ const useFloatingIndicator = ({ parent, ref, target, sizeDetection }: useFloatin
 
         return updatePosition();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [parent, target, dataKey, sizeDetection]);
+    }, [parent, target, dataKey, Detection]);
 
 }
 

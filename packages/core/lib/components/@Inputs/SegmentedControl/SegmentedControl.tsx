@@ -84,7 +84,7 @@ const SegmentedControl = ({ data, name, defaultValue, onChange, ...props }: Prop
                 boxShadow="0 2px 3px 0 rgba(0, 0, 0, 0.123)"
                 color={SegmentIndicatorColor}
                 radius={props.radius}
-                sizeDetection={props.size}
+                Detection={props.size! + props.orientation!}
                 parent={parentRef}
                 target={targetRef[active]}
             />

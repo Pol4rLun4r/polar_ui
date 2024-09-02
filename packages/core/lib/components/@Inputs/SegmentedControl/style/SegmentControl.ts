@@ -17,6 +17,7 @@ export const Option = styled.div`
 
 export const LabelContainer = styled.label`
     display: block;
+    text-align: center;
     color: ${({ isDisable, checked }: { isDisable?: boolean, checked?: boolean }) => isDisable ? SegmentLabelDisable :  checked ? SegmentLabelActive : SegmentLabel};
     transition: color 200ms;
 
