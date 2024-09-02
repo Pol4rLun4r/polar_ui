@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { BodyColors } from "../Global.style";
 
 type mode = 'dark' | 'light';
 
@@ -11,5 +12,6 @@ type ThemeProps = {
 
 export interface ProviderProps {
     children: ReactNode;
-    theme: ThemeProps
+    theme: ThemeProps;
+    bodyColor?: BodyColors;
 }

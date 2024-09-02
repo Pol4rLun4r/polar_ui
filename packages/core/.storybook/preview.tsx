@@ -46,8 +46,8 @@ const preview: Preview = {
   },
   decorators: [(Story, context) => {
     return (
-      <ThemeProvider theme={{ mode: context.globals.theme ? context.globals.theme : 'dark', colorPalette: context.globals.palette }}>
-        <GlobalStyle/>
+      <ThemeProvider theme={{ mode: context.globals.theme ? context.globals.theme : 'dark', colorPalette: context.globals.palette }} >
+        <GlobalStyle bodyColor="secondary"/>
         <Stack align="center" justify="center" height="100%">
           <Box width="70%" height="70%" radius="lg">
             <Story />

@@ -1,10 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 
 // colors
-import { bodyColorPrimary } from "../Theme/Theme";
+import { bodyColorPrimary, bodyColorSecondary } from "../Theme/Theme";
 
 // style
 import { ArrowTooltip } from "../components/@Overlays/Tooltip/style/Tooltip";
+
+export type BodyColors = 'primary' | 'secondary';
+
+interface GlobalStyleProps {
+    bodyColor?: BodyColors;
+}
 
 const GlobalStyle = createGlobalStyle`
     :root {
@@ -39,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
     body{
         width: 100%;
         height: 100%;
-        background-color: ${bodyColorPrimary};
+        background-color: ${({ bodyColor }: GlobalStyleProps) => bodyColor === 'secondary' ? bodyColorSecondary : bodyColorPrimary};
     }
 
     #root{

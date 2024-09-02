@@ -6,15 +6,16 @@ export const bodyColorPrimary = theme('mode', {
     dark: '#242424',
 });
 
+export const bodyColorSecondary = theme('mode', {
+    light: '#ffffff',
+    dark: '#1f1f1f',
+});
+
 export const bodyColorPrimarySection = theme('mode', {
     light: '#f8f9fa',
     dark: '#242424',
 });
 
-export const bodyColorSecondary = theme('mode', {
-    light: '#ffffff',
-    dark: '#1f1f1f',
-});
 
 export const bodyColorSecondarySection = theme('mode', {
     light: '#f8f9fa',

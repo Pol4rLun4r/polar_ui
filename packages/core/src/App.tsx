@@ -10,9 +10,10 @@ function App() {
   return (
     <Flex direction="column" width={"80%"} height={"100%"}>
       <SegmentedControl
-        disabled
-        data={[{ label: 'React', value: 'react'}, 'cock', 'label']}
+        data={[{ label: 'React', value: 'react'}, 'cookie', 'label']}
         onChange={setValue}
+        radius="xl"
+        size="lg"
       />
       <Text>{value}</Text>
     </Flex>

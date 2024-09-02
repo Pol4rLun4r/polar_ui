@@ -1,25 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import Root from './Root.tsx'
 
-// Components
-import TaskList from "./components/TaskList";
-import MainControls from './components/MainControls/MainControls.tsx';
-
-// UI
-import { ThemeProvider, Stack, Title, Box } from "polar_ui"
+// State Manager
+import { RecoilRoot } from "recoil";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  // <React.StrictMode>
-    <ThemeProvider theme={{ mode: 'dark' }}>
-      <Stack height="100%">
-        <Title fontWeight={'bold'} textTransform='capitalize'>testing area</Title>
-        <Box height={"60%"} width={"60%"} radius='md' padding='0rem' gap='0rem' align='stretch' justify='normal'>
-          <App />
-          <MainControls/>
-        </Box>
-        <TaskList/>
-      </Stack>
-    </ThemeProvider>
-  // </React.StrictMode>,
+  <React.StrictMode>
+    <RecoilRoot>
+      <Root />
+    </RecoilRoot>
+  </React.StrictMode>,
 )
