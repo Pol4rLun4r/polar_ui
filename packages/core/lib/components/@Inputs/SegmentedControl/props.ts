@@ -32,8 +32,10 @@ export interface SegmentProps extends PolarProps {
     // segment data/info
     data: (string | SegmentOptionValues)[];
 
+    // sets the first value/default
     defaultValue?: string;
 
+    // catch the value changes
     onChange?: (value: string) => void;
 
     // disables the entire segment
