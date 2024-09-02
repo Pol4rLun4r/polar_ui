@@ -3,6 +3,7 @@ const disableArgs = {
     direction: { table: { disable: true } },
     backgroundColor: { table: { disable: true } },
     bottom: { table: { disable: true } },
+    boxShadow: {table: {disable: true}},
     color: { table: { disable: true } },
     justify: { table: { disable: true } },
     gap: { table: { disable: true } },
