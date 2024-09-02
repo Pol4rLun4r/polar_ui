@@ -12,10 +12,10 @@ import type { PolarStyledComponentsProps } from "../../../@Types/props";
 
 interface Props extends FloatingIndicatorProps, Omit<PolarStyledComponentsProps, 'target'> { }
 
-const FloatingIndicator = ({ parent, target, color, ...props }: Props) => {
+const FloatingIndicator = ({ parent, target, color, sizeDetection, ...props }: Props) => {
     const floatRef = useRef<HTMLDivElement>(null)
 
-    useFloatingIndicator({ parent, target, ref: floatRef });
+    useFloatingIndicator({ parent, target, ref: floatRef, sizeDetection });
 
     return (
         <Indicator backgroundColor={color} {...props} ref={floatRef} />

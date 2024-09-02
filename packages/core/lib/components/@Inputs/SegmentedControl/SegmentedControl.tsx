@@ -51,6 +51,7 @@ const SegmentedControl = ({ data, name, defaultValue, onChange, ...props }: Prop
     const control = processData?.map((item) => (
         <Option
             data-key={item.value}
+            data-size={props.size}
             key={item.value}
             onClick={() => item.disabled ? null : props.disabled ? null : handleActive(item.value)}
             ref={setControlTarget(item.value)}
@@ -82,6 +83,8 @@ const SegmentedControl = ({ data, name, defaultValue, onChange, ...props }: Prop
             <FloatingIndicator
                 boxShadow="0 2px 3px 0 rgba(0, 0, 0, 0.123)"
                 color={SegmentIndicatorColor}
+                radius={props.radius}
+                sizeDetection={props.size}
                 parent={parentRef}
                 target={targetRef[active]}
             />

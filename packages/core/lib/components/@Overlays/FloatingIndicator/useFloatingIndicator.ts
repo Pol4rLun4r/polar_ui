@@ -4,9 +4,11 @@ interface useFloatingProps {
     target: HTMLElement | null | undefined;
     parent: HTMLElement | null | undefined;
     ref: RefObject<HTMLDivElement>;
+
+    sizeDetection?: string;
 }
 
-const useFloatingIndicator = ({ parent, ref, target }: useFloatingProps) => {
+const useFloatingIndicator = ({ parent, ref, target, sizeDetection }: useFloatingProps) => {
 
     // displays which element is being selected according to the `data-key` attribute
     const dataKey = target?.getAttribute('data-key');
@@ -16,7 +18,7 @@ const useFloatingIndicator = ({ parent, ref, target }: useFloatingProps) => {
         if (!target || !parent) {
             return;
         }
-    
+
         const targetRect = target.getBoundingClientRect();
         const parentRect = parent.getBoundingClientRect();
 
@@ -35,11 +37,14 @@ const useFloatingIndicator = ({ parent, ref, target }: useFloatingProps) => {
         }
     };
 
+    updatePosition();
+
     useEffect(() => {
         updatePosition();
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [parent, target, dataKey]);
+        return updatePosition();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [parent, target, dataKey, sizeDetection]);
 
 }
 
