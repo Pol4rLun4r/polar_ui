@@ -13,6 +13,7 @@ import { segmentBackgroundColor, segmentBorderColor, SegmentLabel, SegmentLabelA
 import { LabelContainerSize, LabelSize } from "./Size";
 
 export const Option = styled.div`
+    width: 100%;
 `;
 
 export const LabelContainer = styled.label`
@@ -49,13 +50,12 @@ export const Container = styled.div<Omit<SegmentProps, 'data'>>`
     ${Style()}
 
     // default
-    /* gap:0; */
+    gap:0;
     padding: 0.250rem;
     background-color: ${segmentBackgroundColor};
     display: flex;
     position: relative;
     user-select: none;
-
 
     // settings
     flex-direction: ${({ orientation }) => orientation === 'vertical' ? 'column' : 'row'};

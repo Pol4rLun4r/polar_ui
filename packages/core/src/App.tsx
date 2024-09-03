@@ -8,12 +8,15 @@ function App() {
   const [value, setValue] = useState('react');
 
   return (
-    <Flex direction="column" width={"80%"} height={"100%"}>
+    <Flex direction="column" width={"80%"} height={"100%"} padding="sm">
       <SegmentedControl
         data={[{ label: 'React', value: 'react'}, 'cookie', 'label']}
         onChange={setValue}
-        radius="xl"
-        size="lg"
+        // radius="xl"
+        // size="xl"
+
+        orientation="vertical"
+        fullWidth
       />
       <Text>{value}</Text>
     </Flex>

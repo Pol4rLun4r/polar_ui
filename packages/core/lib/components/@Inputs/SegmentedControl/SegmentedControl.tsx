@@ -51,7 +51,6 @@ const SegmentedControl = ({ data, name, defaultValue, onChange, ...props }: Prop
     const control = processData?.map((item) => (
         <Option
             data-key={item.value}
-            data-size={props.size}
             key={item.value}
             onClick={() => item.disabled ? null : props.disabled ? null : handleActive(item.value)}
             ref={setControlTarget(item.value)}
