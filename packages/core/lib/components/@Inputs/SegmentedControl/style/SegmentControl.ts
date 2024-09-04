@@ -7,19 +7,29 @@ import type { SegmentProps } from "../props";
 import { Style } from "polar_ui";
 
 // colors
-import { segmentBackgroundColor, segmentBorderColor, SegmentLabel, SegmentLabelActive, SegmentLabelDisable } from "../../../../Theme/Themes/Inputs/SegmentControl";
+import { segmentBackgroundColor, segmentBorderColor, SegmentLabel, SegmentLabelActive, SegmentLabelDisable, SegmentSeparator } from "../../../../Theme/Themes/Inputs/SegmentControl";
 
 // sizes
 import { LabelContainerSize, LabelSize } from "./Size";
 
 export const Option = styled.div`
     width: 100%;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        inset-inline-start: 0;
+        background-color: ${({ isNext, isSelected }: { isNext: boolean, isSelected: boolean }) => isNext || isSelected ? '#00000000' : SegmentSeparator};  
+    }
 `;
 
 export const LabelContainer = styled.label`
     display: block;
     text-align: center;
-    color: ${({ isDisable, checked }: { isDisable?: boolean, checked?: boolean }) => isDisable ? SegmentLabelDisable :  checked ? SegmentLabelActive : SegmentLabel};
+    color: ${({ isDisable, checked }: { isDisable?: boolean, checked?: boolean }) => isDisable ? SegmentLabelDisable : checked ? SegmentLabelActive : SegmentLabel};
     transition: color 200ms;
 
     cursor: ${({ isDisable }: { isDisable?: boolean }) => isDisable ? 'not-allowed' : 'pointer'};
@@ -64,6 +74,20 @@ export const Container = styled.div<Omit<SegmentProps, 'data'>>`
     border-color: ${segmentBorderColor};
     ${({ disabled }) => disabled ? 'cursor: not-allowed;' : ''};
     ${({ disabled }) => disabled ? 'opacity: 0.5;' : ''};
+
+    ${Option} {
+        &::before {
+            ${({ borderlessItems }) => borderlessItems ? 'background-color: #00000000;' : ''};
+            width: ${({ orientation }) => orientation === 'vertical' ? '100%' : '.0625rem'};
+            height: ${({ orientation }) => orientation === 'vertical' ? '.0625rem' : ''}
+        }
+
+        &:first-child {
+            &::before{
+                background-color: #00000000;
+            }
+        }
+    }
 
         // sizes
         ${LabelContainer} {

@@ -48,8 +48,10 @@ const SegmentedControl = ({ data, name, defaultValue, onChange, ...props }: Prop
 
     const uuid = useId(name);
 
-    const control = processData?.map((item) => (
+    const control = processData?.map((item, index) => (
         <Option
+            isNext={processData[index - (index === 0 ? 0 : 1)].value === active}
+            isSelected={active === item.value}
             data-key={item.value}
             key={item.value}
             onClick={() => item.disabled ? null : props.disabled ? null : handleActive(item.value)}
@@ -75,7 +77,6 @@ const SegmentedControl = ({ data, name, defaultValue, onChange, ...props }: Prop
     if (data?.length === 0) {
         return null;
     }
-
     return (
         <Container {...props} ref={setParentRef}>
             {control}
@@ -83,7 +84,6 @@ const SegmentedControl = ({ data, name, defaultValue, onChange, ...props }: Prop
                 boxShadow="0 2px 3px 0 rgba(0, 0, 0, 0.123)"
                 color={SegmentIndicatorColor}
                 radius={props.radius}
-                Detection={props.size! + props.orientation!}
                 parent={parentRef}
                 target={targetRef[active]}
             />

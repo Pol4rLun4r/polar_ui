@@ -10,7 +10,6 @@ export const segmentBorderColor = theme('mode', {
     dark: '#424242'
 })
 
-
 export const SegmentIndicatorColor = theme('mode', {
     dark: '#3b3b3b',
     light: '#fff'
@@ -29,4 +28,9 @@ export const SegmentLabelActive = theme('mode', {
 export const SegmentLabelDisable = theme('mode', {
     dark: '#696969',
     light: '#adb5bd'
+})
+
+export const SegmentSeparator = theme('mode', {
+    dark: '#424242',
+    light: '#dee2e6'
 })

@@ -1,14 +1,12 @@
-import { RefObject, useEffect } from "react";
+import { RefObject, useEffect, useRef } from "react";
 
 interface useFloatingProps {
     target: HTMLElement | null | undefined;
     parent: HTMLElement | null | undefined;
     ref: RefObject<HTMLDivElement>;
-
-    Detection?: any;
 }
 
-const useFloatingIndicator = ({ parent, ref, target, Detection }: useFloatingProps) => {
+const useFloatingIndicator = ({ parent, ref, target }: useFloatingProps) => {
 
     // displays which element is being selected according to the `data-key` attribute
     const dataKey = target?.getAttribute('data-key');
@@ -37,14 +35,32 @@ const useFloatingIndicator = ({ parent, ref, target, Detection }: useFloatingPro
         }
     };
 
-    updatePosition();
+    const targetResizeObserver = useRef<ResizeObserver>();
+    const parentResizeObserver = useRef<ResizeObserver>();
+
+    // updatePosition();
 
     useEffect(() => {
         updatePosition();
 
-        return updatePosition();
+        if (target) {
+            targetResizeObserver.current = new ResizeObserver(updatePosition);
+            targetResizeObserver.current.observe(target);
+
+            if (parent) {
+                parentResizeObserver.current = new ResizeObserver(updatePosition);
+                parentResizeObserver.current.observe(parent);
+            }
+
+            return () => {
+                targetResizeObserver.current?.disconnect();
+                parentResizeObserver.current?.disconnect();
+            }
+        }
+
+        return undefined;
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [parent, target, dataKey, Detection]);
+    }, [parent, target, dataKey]);
 
 }
 

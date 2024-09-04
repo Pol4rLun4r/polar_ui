@@ -12,11 +12,6 @@ function App() {
       <SegmentedControl
         data={[{ label: 'React', value: 'react'}, 'cookie', 'label']}
         onChange={setValue}
-        // radius="xl"
-        // size="xl"
-
-        orientation="vertical"
-        fullWidth
       />
       <Text>{value}</Text>
     </Flex>

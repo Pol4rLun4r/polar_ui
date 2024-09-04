@@ -28,6 +28,7 @@ const meta: Meta<SegmentProps> = {
         fullWidth: { control: {type: 'boolean'}},
         withBorder: { control: {type: 'boolean'}},
         orientation: { control: {type: 'inline-radio'}},
+        borderlessItems: {control: {type: 'boolean'}},
         disabled: { control: {type: 'boolean'}},
     }
 }
@@ -43,6 +44,7 @@ export const Default: Story = {
         fullWidth: false,
         withBorder: false,
         orientation: "horizontal",
+        borderlessItems: false,
         disabled: false,
     }
 }
