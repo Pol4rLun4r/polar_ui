@@ -82,7 +82,7 @@ const SegmentedControl = ({ data, name, defaultValue, onChange, ...props }: Prop
             {control}
             <FloatingIndicator
                 boxShadow="0 2px 3px 0 rgba(0, 0, 0, 0.123)"
-                color={SegmentIndicatorColor}
+                color={props.color ? props.color : SegmentIndicatorColor}
                 radius={props.radius}
                 parent={parentRef}
                 target={targetRef[active]}
